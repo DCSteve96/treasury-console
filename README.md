@@ -1,9 +1,14 @@
-# Treasury console
+# Bursar, the site
 
-Two static pages for a NEAR treasury policy contract. No build, no server, no secrets in this repository.
+The static pages of Bursar, served with GitHub Pages at https://bursar.network. No build, no server, no secrets in this repository: every page reads the NEAR chain over public RPC and signs in the browser.
 
-- `index.html`: landing page, with the last decisions read live from the contract.
-- `dashboard.html`: read-only dashboard. Balance, caps, vendors and every payment decision, read from the NEAR RPC.
-- `app.html`: the console. Drop a PDF invoice, have it read inside a NEAR AI Cloud enclave, check the signed receipt in the page, then ask the policy contract to pay. The API key and the agent's function-call key are entered in the page and stay in that browser's local storage.
+- `index.html`: the landing page, with the last decisions read live from the demo contract.
+- `login.html`: sign in with any NEAR wallet, an invite link, or a keys file.
+- `console.html`: the console. Inbox, invoices read in a NEAR AI Cloud enclave, attention, vendors, orders, analytics, settings.
+- `explorer.html`: every treasury on the network, read from the public registry and verified against each contract.
+- `dashboard.html`: one company's public dashboard.
+- `docs.html`: the documentation in one page. `privacy.html`: the privacy notice.
+- `contracts/`: the policy contract build the console deploys for a new company, and the list of known builds.
+- `samples/`, `brand/`, `vendor/`: sample invoices with recorded readings, the mark and logo, the bundled Meteor SDK.
 
-Served with GitHub Pages from the root of this repository.
+The source of the whole project, contracts, agent, relay and these pages, is https://github.com/DCSteve96/Bursar. Bursar is software, not a payment service: funds stay in the company's own contract, with the company's keys.
